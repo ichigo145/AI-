@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+*.log
+nohup.out
+
+# build artifacts
+frontend/dist/
+frontend/dev-dist/
+
+# editor
+.vscode/
+.idea/
