@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         brand: {
-          50: '#EEF4FF',
+          50: '#EEF3FF',
           100: '#DCE7FE',
           200: '#BBD0FD',
           300: '#8EB1FB',
@@ -14,49 +14,46 @@ export default {
           600: '#1A56DB',
           700: '#1645B0',
           800: '#143C90',
-          900: '#152F6E',
+          900: '#0F2A6B',
         },
         accent: {
           400: '#22D3EE',
           500: '#06B6D4',
           600: '#0891B2',
         },
-        canvas: '#F8FAFF',
-        ink: '#111827',
+        canvas: '#FAFBFC',
+        paper: '#FFFFFF',
+        ink: '#0F172A',
+        muted: '#64748B',
       },
       fontFamily: {
-        sans: ['"Noto Sans JP"', 'system-ui', 'sans-serif'],
-        display: ['"Zen Kaku Gothic New"', '"Noto Sans JP"', 'sans-serif'],
+        sans: ['"Inter"', '"Noto Sans JP"', 'system-ui', 'sans-serif'],
+        display: ['"Inter"', '"Zen Kaku Gothic New"', '"Noto Sans JP"', 'sans-serif'],
       },
       boxShadow: {
-        soft: '0 4px 20px -6px rgba(26, 86, 219, 0.12)',
-        ring: '0 0 0 4px rgba(26, 86, 219, 0.10)',
-        glow: '0 10px 40px -10px rgba(26, 86, 219, 0.45)',
-      },
-      backgroundImage: {
-        'brand-gradient':
-          'linear-gradient(135deg, #1A56DB 0%, #3A66ED 45%, #06B6D4 100%)',
-        'hero-radial':
-          'radial-gradient(1200px 600px at 50% -10%, rgba(26,86,219,0.15), transparent 60%), radial-gradient(800px 400px at 90% 10%, rgba(6,182,212,0.12), transparent 60%)',
+        // プロらしいシンプルな影
+        sm: '0 1px 2px 0 rgba(15, 23, 42, 0.04)',
+        soft: '0 1px 3px 0 rgba(15, 23, 42, 0.06), 0 1px 2px -1px rgba(15, 23, 42, 0.04)',
+        card: '0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04)',
+        elevated: '0 12px 28px -8px rgba(15, 23, 42, 0.12), 0 4px 8px -4px rgba(15, 23, 42, 0.06)',
       },
       animation: {
-        'spin-slow': 'spin 2.4s linear infinite',
-        shimmer: 'shimmer 2.2s linear infinite',
-        'fade-in': 'fadeIn 0.4s ease-out both',
-        'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
+        'fade-in': 'fadeIn 0.35s ease-out both',
+        'slide-up': 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both',
+        'slide-in-right': 'slideInRight 0.35s cubic-bezier(0.16, 1, 0.3, 1) both',
       },
       keyframes: {
-        shimmer: {
-          '0%': { backgroundPosition: '-200% 0' },
-          '100%': { backgroundPosition: '200% 0' },
-        },
         fadeIn: {
-          '0%': { opacity: 0, transform: 'translateY(8px)' },
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        slideUp: {
+          '0%': { opacity: 0, transform: 'translateY(12px)' },
           '100%': { opacity: 1, transform: 'translateY(0)' },
         },
-        pulseSoft: {
-          '0%, 100%': { opacity: 0.55 },
-          '50%': { opacity: 1 },
+        slideInRight: {
+          '0%': { opacity: 0, transform: 'translateX(20px)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' },
         },
       },
     },

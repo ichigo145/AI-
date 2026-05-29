@@ -32,16 +32,16 @@ export default function ToastHost() {
       {items.map((t) => (
         <div
           key={t.id}
-          className="pointer-events-auto flex w-full max-w-md animate-fade-in items-center gap-3 rounded-xl border border-slate-100 bg-white/95 p-3 shadow-glow backdrop-blur"
+          className="pointer-events-auto flex w-full max-w-md animate-slide-up items-center gap-3 rounded-lg border border-slate-200 bg-white p-3 shadow-elevated"
         >
           {t.type === 'error' ? (
             <AlertCircle className="h-5 w-5 shrink-0 text-rose-500" />
           ) : (
-            <CheckCircle2 className="h-5 w-5 shrink-0 text-brand-600" />
+            <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
           )}
           <div className="flex-1 text-sm font-semibold text-ink">{t.message}</div>
           <button
-            className="rounded-full p-1 text-slate-400 hover:bg-slate-100"
+            className="rounded-md p-1 text-slate-400 hover:bg-slate-100"
             onClick={() => remove(t.id)}
             aria-label="閉じる"
           >
