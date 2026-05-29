@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="512" y1="0" x2="512" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1B3F8F"/>
+      <stop offset="0.55" stop-color="#1A56DB"/>
+      <stop offset="1" stop-color="#0E2E7A"/>
+    </linearGradient>
+    <linearGradient id="mono" x1="320" y1="240" x2="704" y2="784" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DCE7FE"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1024" height="1024" rx="230" ry="230" fill="url(#bg)"/>
+
+  <!--
+    モノグラム "V" を厚みのあるストロークで描画。
+    左半身と右半身の太さを微妙に変え、光学的バランスを取る。
+    最下点を切り欠いて、ピクセル化された解像度を示唆。
+  -->
+  <g fill="url(#mono)">
+    <!-- V 左半身 -->
+    <path d="
+      M 304 296
+      L 432 296
+      L 540 612
+      L 484 612
+      Z" />
+    <!-- V 右半身 -->
+    <path d="
+      M 720 296
+      L 592 296
+      L 484 612
+      L 540 612
+      Z" />
+    <!-- V の底のジョイント (テーパー) -->
+    <path d="
+      M 484 612
+      L 540 612
+      L 528 660
+      L 496 660
+      Z" />
+  </g>
+
+  <!--
+    解像度インジケータ：V の下に高さを示す上向きシェブロン。
+    実機ではアイコンの「動き」として認識される。
+  -->
+  <g fill="#22D3EE">
+    <path d="
+      M 512 700
+      L 588 776
+      L 548 776
+      L 548 820
+      L 476 820
+      L 476 776
+      L 436 776
+      Z" />
+  </g>
+
+  <!--
+    解像度ドット 3 つ。"Up" のニュアンスで右上がりに配置。
+  -->
+  <g fill="#FFFFFF" opacity="0.85">
+    <circle cx="780" cy="244" r="14"/>
+    <circle cx="824" cy="208" r="9"/>
+    <circle cx="852" cy="180" r="6"/>
+  </g>
+</svg>

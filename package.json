@@ -1,0 +1,14 @@
+{
+  "name": "vision-up",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vision Up — AIに匹敵する画像高画質化Webアプリ (Frontend + Backend)",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "icons": "npm --prefix backend run icons",
+    "dev:backend": "cd backend && node index.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && node index.js"
+  }
+}
